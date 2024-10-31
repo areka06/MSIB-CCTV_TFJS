@@ -1,0 +1,126 @@
+/* .App {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.App > * {
+  margin: 3px 0;
+}
+
+.header {
+  text-align: center;
+}
+
+.header p {
+  margin: 5px 0;
+}
+
+.code {
+  padding: 5px;
+  color: greenyellow;
+  background-color: black;
+  border-radius: 5px;
+}
+
+/* .main{
+
+} */
+
+.content{
+  border-radius: 20px;
+  position: relative;
+  width: 400px;
+  height: 225px;
+  display: flex;
+}
+
+.content > #video-player {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.content > canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+canvas{
+  width: 100%;
+  height: 100%;
+}
+
+
+/* button {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border: 2px solid black;
+  margin: 0 5px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+/* 
+button:hover {
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+} */
+
+
+/* style/App.css */
+
+.video-js {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
+
+.vjs-big-play-centered .vjs-big-play-button {
+  display: block !important;
+}
+
+.vjs-modal-dialog{
+  display: none;
+}
+
+.vjs-control-bar{
+  visibility: hidden; /* atau opacity: 0; */
+  position: relative;
+}
+
+.vjs-big-play-button{
+  display: none;
+}
+
+.vjs-play-control{
+  width: 90px;
+  height: 30px;
+  border: 0px;
+  background-color: rgb(0, 157, 255);
+  visibility: visible; /* atau opacity: 0; */
+  position: relative;
+}
+
+.vjs-tech{
+  border-radius: 30px;
+}
+
+#video-player{
+  width: 2;
+}
+
+.vjs-loading-spinner{
+  display: none;
+}
+
+.vjs-control-bar{
+  display: none;
+}

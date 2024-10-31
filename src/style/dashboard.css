@@ -1,0 +1,321 @@
+#root {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* Center map container with custom dimensions */
+#map-container {
+    height: calc(100% - 121px); /* Adjust height relative to viewport height */
+    width: 95vw;  /* Adjust width relative to viewport width */
+    max-width: 750px; /* Limit max width */
+    max-height: 9000px; /* Limit max height */
+    background-color: lightgrey;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Sidebar on the left */
+#left-container {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    z-index: 1;
+    position: absolute;
+    top: 10.5%;
+    margin-left: 12px;
+    margin-top: 12px;
+    width: 22vw; /* Responsive width */
+    max-width: 350px; /* Maximum width for larger screens */
+    height: calc(100% - 121px);
+    border-radius: 4px;
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+
+/* Sidebar on the right */
+#right-container {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    z-index: 1;
+    position: absolute;
+    top: 10.5%;
+    right: 0;
+    margin-right: 12px;
+    margin-top: 12px;
+    width: 22vw; /* Responsive width */
+    max-width: 350px; /* Maximum width for larger screens */
+    height: calc(100% - 15px);
+    border-radius: 4px;
+    overflow: auto;
+}
+
+/* Bottom container */
+#bottom-container {
+    display: flex; /* Menggunakan Flexbox untuk membagi dua bagian */
+    background-color: rgba(201, 196, 196, 0.147);
+    color: #000000;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    z-index: 1;
+    position: absolute;
+    top: 97%;
+    margin-right: 12px;
+    margin-left: 12px;
+    width: calc(100% - 20px); /* Responsive width */
+    max-width: auto; /* Maximum width for larger screens */
+    height: calc(100% - 40px);
+    max-height: 400px;
+    border-radius: 4px;
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+
+/* Mengatur dua bagian menjadi kiri dan kanan */
+.bottom-left, .bottom-right {
+    flex: 1; /* Agar kedua elemen memiliki lebar yang sama */
+    padding: 10px; /* Memberi ruang di sekitar elemen */
+    box-sizing: border-box; /* Memastikan padding tidak mengubah ukuran total elemen */
+}
+
+/* Menambahkan margin antar elemen */
+.bottom-right {
+    margin-left: 20px; /* Memberi jarak antara bagian kiri dan kanan */
+}
+
+.bottom-left, .bottom-right, .h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Responsiveness: Stack on smaller screens */
+@media (max-width: 768px) {
+    #bottom-container {
+        flex-direction: column; /* Stack the two sections vertically on small screens */
+    }
+    
+    .bottom-right {
+        margin-left: 0; /* Remove the gap on smaller screens */
+    }
+}
+
+/* Bottom container backup*/
+#bottomcontainer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 60px); /* Adjust width for full width minus margins */
+    max-width: 800px; /* Limit maximum width */
+    height: 80vh; /* Adjust height relative to viewport height */
+    max-height: 740px; /* Limit maximum height */
+    border-radius: 4px;
+    overflow: auto;
+}
+
+
+/* Tab container */
+.tab-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd; /* Garis bawah untuk membuat kesan tab */
+  }
+  
+  /* Tab button (folder style) */
+  .tab-button {
+    background-color: #ffffff;
+    color: white;
+    /*border: 1px solid #00905C;*/
+    border-color: #ddd;
+    border-bottom: none; /* Hilangkan garis bawah */
+    padding: 5px 5px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    border-radius: 5px 5px 0 0; /* Membuat bagian atas bulat */
+    transition: background-color 0.3s ease;
+    margin-right: 1px;
+    margin-left: 1px;
+  }
+  
+  /* Tab button saat tidak aktif */
+  .tab-button:not(.active) {
+    background-color: rgba(201, 196, 196, 0.147);
+    font-weight: bold;
+    color: #000000;
+    z-index: 0; /* Tab tidak aktif di belakang */
+    border-bottom: none; /* Hilangkan garis bawah */
+    border-color: #ddd;
+  }
+  
+  /* Tab button saat aktif */
+  .tab-button.active {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    font-size: 12px;
+    /*border-color: #2d3e50;*/
+    z-index: 1; /* Tab aktif di depan */
+    position: relative;
+    top: 2px; /* Naikkan sedikit tab yang aktif */
+    border-bottom: none; /* Hilangkan garis bawah */
+    border-color: #ddd;
+  }
+  
+  /* Konten di bawah tab */
+.content-container {
+    background-color: rgba(201, 196, 196, 0.147);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .content-container h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .content-container p {
+    font-size: 12px;
+  }
+  
+
+/* Popup styles */
+.custom-popup .mapboxgl-popup-content {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 10px;
+}
+
+.custom-popup h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.custom-popup .popup-content video {
+    width: 100%;
+    height: auto;
+}
+
+/* Marker styles */
+.custom-marker {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%; /* Circular markers */
+    cursor: pointer;
+}
+
+/* Reset button styles */
+.reset-button {
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+    left: 12px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #00905C;
+    color: white;
+    font-weight: bold;
+}
+
+table td {
+    background-color: white;
+    color: #333;
+}
+
+table tr:nth-child(even) { background-color: #f2f2f2; }
+
+table tr:hover { background-color: #ddd; }
+
+table td.bold, table th.bold {
+    font-weight: bold;
+    background-color: #00905C;
+    color: #fff;
+}
+
+th.in {
+    background-color: #f0bd23;
+    color: white;
+    font-weight: bold;
+}
+
+th.out {
+    background-color: rgb(248, 46, 46);
+}
+
+
+/* Media Queries for smaller screens */
+@media screen and (max-width: 768px) {
+    /* Adjust map size for tablets and smaller devices */
+    #map-container {
+        width: 90vw;
+        height: 50vh;
+    }
+
+    /* Adjust sidebar sizes for tablets */
+    #left-container,
+    #right-container {
+        width: 25vw; /* Use a larger portion of the screen */
+        max-width: 150px;
+    }
+
+    /* Adjust bottom container size */
+    #bottom-container {
+        height: 15vh;
+        max-height: 120px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Adjust map size for mobile devices */
+    #map-container {
+        width: 95vw;
+        height: 40vh;
+    }
+
+    /* Make sidebars smaller on mobile */
+    #left-container,
+    #right-container {
+        width: 30vw;
+        max-width: 120px;
+    }
+
+    /* Adjust bottom container size */
+    #bottom-container {
+        height: 10vh;
+        max-height: 100px;
+    }
+}

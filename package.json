@@ -1,0 +1,66 @@
+{
+  "name": "yolov8-tfjs",
+  "description": "Object detection application right in your browser using YOLOv8 and Tensorflow.js",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hyuto/yolov8-tfjs.git"
+  },
+  "keywords": [
+    "object detection",
+    "yolov8",
+    "javascript",
+    "react",
+    "tensorflow.js"
+  ],
+  "author": "Wahyu Setianto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hyuto/yolov8-tfjs/issues"
+  },
+  "homepage": "https://github.com/Hyuto/yolov8-tfjs#readme",
+  "dependencies": {
+    "@shadcn/ui": "^0.0.4",
+    "@tanstack/react-router": "^1.58.9",
+    "@tanstack/router": "^0.0.1-beta.53",
+    "@tensorflow/tfjs": "^4.1.0",
+    "@videojs/http-streaming": "^3.10.0",
+    "alert": "^6.0.2",
+    "axios": "^1.7.7",
+    "button": "^1.1.1",
+    "card": "^2.5.4",
+    "chart.js": "^4.4.4",
+    "framer-motion": "^11.5.4",
+    "hls.js": "^1.5.16",
+    "loader": "^2.1.1",
+    "lodash": "^4.17.21",
+    "lucide-react": "^0.453.0",
+    "mapbox-gl": "^3.6.0",
+    "normalize.css": "^8.0.1",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.26.2",
+    "video.js": "^8.17.3",
+    "videojs-contrib-hls": "^5.15.0"
+  },
+  "devDependencies": {
+    "@tanstack/router-devtools": "^1.58.9",
+    "@tanstack/router-plugin": "^1.58.4",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "autoprefixer": "^10.4.20",
+    "gh-pages": "^5.0.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.11",
+    "vite": "^3.2.11"
+  },
+  "proxy": "http://10.7.183.175:3013"
+}
